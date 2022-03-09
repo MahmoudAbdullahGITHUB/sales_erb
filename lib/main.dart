@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sales_erb/screens/home-screen/home_screen.dart';
+import 'package:sales_erb/utils/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Sales',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: lightTheme(),
+      darkTheme: darkTheme(),
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      // ),
       home: HomeScreen(),
       routes: {
         HomeScreen.routName: (_) => HomeScreen(),
